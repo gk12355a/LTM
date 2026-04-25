@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  # Dịch vụ Backend API
+  banking-app:
+    build:
+      context: ./BankingApp
+    ports:
+      - "5156:5156"
+    networks:
+      - ltm-network
+
+  # Dịch vụ Socket Server
+  http-server:
+    build:
+      context: ./HttpServerCore
+    ports:
+      - "8080:8080"
+    depends_on:
+      - banking-app
+    networks:
+      - ltm-network
+    environment:
+      # Cấu hình để Socket Server tìm thấy API trong mạng Docker
+      - BACKEND_URL=http://banking-app:5156
+
+networks:
+  ltm-network:
+    driver: bridge

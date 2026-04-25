@@ -1,0 +1,14 @@
+D:\Projects\LTM\HttpServerCore\bin\Debug\net8.0\HttpServerCore.exe
+D:\Projects\LTM\HttpServerCore\bin\Debug\net8.0\HttpServerCore.deps.json
+D:\Projects\LTM\HttpServerCore\bin\Debug\net8.0\HttpServerCore.runtimeconfig.json
+D:\Projects\LTM\HttpServerCore\bin\Debug\net8.0\HttpServerCore.dll
+D:\Projects\LTM\HttpServerCore\bin\Debug\net8.0\HttpServerCore.pdb
+D:\Projects\LTM\HttpServerCore\obj\Debug\net8.0\HttpServerCore.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\LTM\HttpServerCore\obj\Debug\net8.0\HttpServerCore.AssemblyInfoInputs.cache
+D:\Projects\LTM\HttpServerCore\obj\Debug\net8.0\HttpServerCore.AssemblyInfo.cs
+D:\Projects\LTM\HttpServerCore\obj\Debug\net8.0\HttpServerCore.csproj.CoreCompileInputs.cache
+D:\Projects\LTM\HttpServerCore\obj\Debug\net8.0\HttpServerCore.dll
+D:\Projects\LTM\HttpServerCore\obj\Debug\net8.0\refint\HttpServerCore.dll
+D:\Projects\LTM\HttpServerCore\obj\Debug\net8.0\HttpServerCore.pdb
+D:\Projects\LTM\HttpServerCore\obj\Debug\net8.0\HttpServerCore.genruntimeconfig.cache
+D:\Projects\LTM\HttpServerCore\obj\Debug\net8.0\ref\HttpServerCore.dll
