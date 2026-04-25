@@ -12,3 +12,4 @@ D:\Projects\LTM\HttpServerCore\obj\Debug\net8.0\refint\HttpServerCore.dll
 D:\Projects\LTM\HttpServerCore\obj\Debug\net8.0\HttpServerCore.pdb
 D:\Projects\LTM\HttpServerCore\obj\Debug\net8.0\HttpServerCore.genruntimeconfig.cache
 D:\Projects\LTM\HttpServerCore\obj\Debug\net8.0\ref\HttpServerCore.dll
+D:\Projects\LTM\HttpServerCore\obj\Debug\net8.0\HttpServerCore.sourcelink.json

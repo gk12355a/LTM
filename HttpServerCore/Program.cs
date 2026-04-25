@@ -110,9 +110,20 @@ namespace HttpServerCore
                     if (method == "POST" || method == "PUT")
                         backendRequest.Content = new StringContent(bodyText, Encoding.UTF8, "application/json");
 
-                    string sessionCookie = ExtractCookie(requestText, "session");
-                    if (!string.IsNullOrEmpty(sessionCookie))
-                        backendRequest.Headers.Add("x-session", sessionCookie);
+                    // 1. Thử đọc Session từ Header do Swagger gửi (x-session)
+                    string sessionValue = ExtractHeader(requestText, "x-session");
+                    
+                    // 2. Nếu Swagger không gửi, thử tìm trong Cookie do Trình duyệt gửi
+                    if (string.IsNullOrEmpty(sessionValue))
+                    {
+                        sessionValue = ExtractCookie(requestText, "session");
+                    }
+
+                    // 3. Nếu tìm thấy Session (từ Header hoặc Cookie), gắn nó vào gói tin gửi sang Backend
+                    if (!string.IsNullOrEmpty(sessionValue))
+                    {
+                        backendRequest.Headers.Add("x-session", sessionValue);
+                    }
 
                     var backendResponse = await _httpClient.SendAsync(backendRequest);
                     var responseBody = await backendResponse.Content.ReadAsByteArrayAsync();
@@ -155,6 +166,19 @@ namespace HttpServerCore
                         var parts = c.Trim().Split('=');
                         if (parts.Length == 2 && parts[0] == cookieName) return parts[1];
                     }
+                }
+            }
+            return "";
+        }
+        static string ExtractHeader(string requestText, string headerName)
+        {
+            string[] lines = requestText.Split(new[] { "\r\n" }, StringSplitOptions.None);
+            string prefix = headerName + ":";
+            foreach (var line in lines)
+            {
+                if (line.StartsWith(prefix, StringComparison.OrdinalIgnoreCase))
+                {
+                    return line.Substring(prefix.Length).Trim();
                 }
             }
             return "";
