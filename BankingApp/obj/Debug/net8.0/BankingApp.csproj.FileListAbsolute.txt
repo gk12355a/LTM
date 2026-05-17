@@ -103,3 +103,4 @@ D:\Projects\LTM\BankingApp\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
 D:\Projects\LTM\BankingApp\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 D:\Projects\LTM\BankingApp\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 D:\Projects\LTM\BankingApp\obj\Debug\net8.0\BankingApp.MvcApplicationPartsAssemblyInfo.cs
+D:\Projects\LTM\BankingApp\obj\Debug\net8.0\BankingApp.sourcelink.json
